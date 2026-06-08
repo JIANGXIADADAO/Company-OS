@@ -1,0 +1,50 @@
+# Claude Code
+.claude/settings.json
+.claude/settings.local.json
+.claude/credentials.json
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build
+dist/
+build/
+*.tsbuildinfo
+
+# Projects (user's private projects)
+projects/*
+!projects/.gitkeep
+
+# Archive
+archive/*
+!archive/.gitkeep
+
+# Raw sources (user's private sources)
+raw/clippings/*
+raw/articles/*
+raw/papers/*
+raw/books/*
+raw/podcasts/*
+raw/projects/*
+raw/notes/*
+raw/repos/*
+raw/assets/*
+!raw/.gitkeep
+!raw/README.md
