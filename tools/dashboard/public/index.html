@@ -133,7 +133,7 @@ cat > .claude/settings.json &lt;&lt; 'EOF'
         "hooks": [
           {
             "type": "command",
-            "command": "cd ${CLAUDE_PROJECT_DIR} && git add -A && git commit -m \"[auto] ${CLAUDE_TOOL_NAME} ${CLAUDE_FILE_PATH}\""
+            "command": "cd ${CLAUDE_PROJECT_DIR} && git add -A && git commit -m \"[auto] ${CLAUDE_TOOL_NAME} ${CLAUDE_FILE_PATH}\" -m \"$(git diff --cached --stat)\""
           }
         ]
       }

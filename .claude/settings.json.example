@@ -1,28 +1,4 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(curl:*)",
-      "Bash(git:*)",
-      "Bash(grep:*)",
-      "Bash(find:*)",
-      "Bash(wc:*)",
-      "Bash(cat:*)",
-      "Bash(head:*)",
-      "Bash(tail:*)",
-      "Bash(ls:*)",
-      "Bash(mkdir:*)",
-      "Bash(cp:*)",
-      "Bash(mv:*)",
-      "Bash(touch:*)",
-      "WebSearch",
-      "WebFetch"
-    ],
-    "deny": [
-      "Bash(rm:*)",
-      "Bash(sudo:*)",
-      "Bash(chmod:*)"
-    ]
-  },
   "hooks": {
     "PostToolUse": [
       {
@@ -30,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "git add -A && git commit -m \"auto: ${CLAUDE_TOOL_NAME} ${CLAUDE_FILE_PATH}\""
+            "command": "cd ${CLAUDE_PROJECT_DIR} && git add -A && git commit -m \"[auto] ${CLAUDE_TOOL_NAME} ${CLAUDE_FILE_PATH}\" -m \"$(git diff --cached --stat)\""
           }
         ]
       }
