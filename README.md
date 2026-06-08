@@ -68,6 +68,12 @@ cd projects/my-first-product && claude  # 从 Scout 开始
 
 详见 [[wiki/concepts/多 Agent 协作模型|多 Agent 协作模型]]。
 
+## 工具
+
+| 工具 | 说明 |
+|------|------|
+| **Agent Team Dashboard** | 本地优先的 Agent 团队可视化面板——流程 + 操作日志 + 进程监控。`cd tools/dashboard && npm start` |
+
 ## 目录结构
 
 ```
@@ -78,6 +84,7 @@ my-company/
 ├── agents/                ← Agent 模板（人力资源部）
 ├── wiki/                  ← 长期记忆（Cub 唯一写者）
 ├── tools/                 ← 可复用工具脚本
+│   └── dashboard/          ← Agent 团队可视化面板
 ├── raw/                   ← 不可变原始来源
 ├── inboxes/               ← Worker 踩坑收件箱
 ├── projects/              ← 进行中的项目

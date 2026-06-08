@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Agent Team Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<div class="app">
+  <!-- Header -->
+  <header class="header">
+    <h1 class="header-title">&#x25C8; AGENT TEAM DASHBOARD</h1>
+    <div class="header-meta">
+      <span class="conn-status conn-live" id="connStatus">&#x25CF; LIVE</span>
+      <span id="agentCount">0 agents</span>
+      <span id="clock">--:--:--</span>
+    </div>
+  </header>
+
+  <!-- Dashboard Panels -->
+  <div class="dashboard">
+
+    <!-- Pipeline Panel (top, full width) -->
+    <section class="panel panel-pipeline" id="pipeline-panel">
+      <div class="panel-header">
+        <div class="panel-header-left">
+          <span class="panel-icon panel-icon-pipeline">&#x25C6;</span>
+          <span class="panel-title">Pipeline</span>
+        </div>
+        <div class="panel-header-right">
+          <span class="panel-summary" id="pipeline-summary">0/5</span>
+          <span class="panel-refresh" id="pipeline-refresh" title="Refresh">&#x21BB;</span>
+          <button class="panel-toggle" data-panel="pipeline" title="Collapse">&#x25B2;</button>
+        </div>
+      </div>
+      <div class="panel-body" id="pipeline-body">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- Bottom panels row -->
+    <div class="bottom-panels">
+
+      <!-- Operation Log Panel (left, ~60%) -->
+      <section class="panel panel-gitlog" id="gitlog-panel">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-icon panel-icon-gitlog">&#x1F4CB;</span>
+            <span class="panel-title">Operation Log</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-summary" id="gitlog-summary">0 commits</span>
+            <span class="panel-refresh" id="gitlog-refresh" title="Refresh">&#x21BB;</span>
+            <button class="panel-toggle" data-panel="gitlog" title="Collapse">&#x25B2;</button>
+          </div>
+        </div>
+        <div class="panel-body" id="gitlog-body">
+          <!-- Rendered by app.js -->
+        </div>
+      </section>
+
+      <!-- Process Monitor Panel (right, ~40%) -->
+      <section class="panel panel-process" id="process-panel">
+        <div class="panel-header">
+          <div class="panel-header-left">
+            <span class="panel-icon panel-icon-process">&#x1F535;</span>
+            <span class="panel-title">Process Monitor</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-summary" id="process-summary">0 active</span>
+            <span class="panel-refresh" id="process-refresh" title="Refresh">&#x21BB;</span>
+            <button class="panel-toggle" data-panel="process" title="Collapse">&#x25B2;</button>
+          </div>
+        </div>
+        <div class="panel-body" id="process-body">
+          <!-- Rendered by app.js -->
+        </div>
+      </section>
+
+    </div><!-- /bottom-panels -->
+  </div><!-- /dashboard -->
+</div><!-- /app -->
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
