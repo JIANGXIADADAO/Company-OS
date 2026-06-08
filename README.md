@@ -72,7 +72,7 @@ cd projects/my-first-product && claude  # 从 Scout 开始
 
 | 工具 | 说明 |
 |------|------|
-| **Agent Team Dashboard** | 本地优先的 Agent 团队可视化面板——流程 + 操作日志 + 进程监控。`cd tools/dashboard && npm start` |
+| **Agent Team Dashboard** | 本地优先的 Agent 团队可视化面板——流程 + 操作日志 + 进程监控。详见 [Dashboard README](tools/dashboard/README.md) · `cd tools/dashboard && npm start` |
 
 ## 目录结构
 
