@@ -9,14 +9,12 @@ Company OS 子模块，本地优先、零配置。三个面板覆盖从文件系
 ## 启动
 
 ```bash
-cd tools/dashboard
-npm install
-npm start
+npx agent-team-dashboard
 ```
 
 浏览器自动打开 `http://localhost:3456`。
 
-> **注意**：必须从 company-os 仓库根目录运行（dashboard 读取上级目录的 `briefs/`、`src/`、`.git/` 来展示数据）。
+> 在项目目录下运行——Dashboard 以当前目录为项目根，自动读取 `briefs/`、`src/`、`.git/` 来展示数据。
 
 ## 依赖要求
 

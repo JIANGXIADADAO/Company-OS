@@ -1,8 +1,7 @@
 {
   "name": "agent-team-dashboard",
   "version": "0.1.0",
-  "private": true,
-  "description": "Agent Team Dashboard — visual dashboard for Company OS agent projects",
+  "description": "Local-first visual dashboard for AI agent teams — Pipeline + Operation Log + Process Monitor",
   "bin": {
     "agent-team-dashboard": "./server.js"
   },
