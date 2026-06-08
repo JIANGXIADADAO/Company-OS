@@ -1059,3 +1059,161 @@ body::after {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--border-hover);
 }
+
+/* ─── Help Button ─────────────────────────────────────────────────── */
+
+#helpBtn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-panel);
+  border: 1px solid var(--border-default);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+#helpBtn:hover {
+  color: var(--green);
+  border-color: var(--green-dim);
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.12);
+}
+
+/* ─── Modal ────────────────────────────────────────────────────────── */
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 12, 20, 0.85);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  max-width: 720px;
+  max-height: 80vh;
+  width: 90%;
+  overflow-y: auto;
+  animation: modalIn 0.25s ease-out;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border-default);
+  position: sticky;
+  top: 0;
+  background: var(--bg-panel);
+  z-index: 1;
+}
+
+.modal-title {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+}
+
+.modal-close {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.2s;
+}
+
+.modal-close:hover { color: #ef4444; }
+
+.modal-body {
+  padding: var(--space-4) var(--space-5) var(--space-5);
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.modal-body h3 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin: var(--space-4) 0 var(--space-2) 0;
+  letter-spacing: 0.05em;
+}
+
+.modal-body h3:first-child { margin-top: 0; }
+
+.modal-body p {
+  margin: var(--space-2) 0;
+}
+
+.modal-body pre {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  overflow-x: auto;
+  font-size: 0.7rem;
+  margin: var(--space-2) 0;
+}
+
+.modal-body code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  background: var(--bg-deep);
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+.modal-body pre code {
+  background: none;
+  padding: 0;
+}
+
+.modal-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-2) 0;
+}
+
+.modal-body td {
+  padding: var(--space-1) var(--space-2);
+  border-bottom: 1px solid var(--border-default);
+  font-size: 0.7rem;
+}
+
+.modal-body td:first-child {
+  white-space: nowrap;
+  color: var(--text-primary);
+  width: 1%;
+}
+
+.modal-body ul {
+  padding-left: var(--space-4);
+  margin: var(--space-2) 0;
+}

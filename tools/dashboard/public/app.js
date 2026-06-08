@@ -699,7 +699,36 @@ function connectSSE() {
    Init
    ═══════════════════════════════════════════════════════════════════ */
 
+function setupHelpModal() {
+  var helpBtn = document.getElementById('helpBtn');
+  var modal = document.getElementById('helpModal');
+  var closeBtn = document.getElementById('helpClose');
+
+  helpBtn.addEventListener('click', function() {
+    modal.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', function() {
+    modal.classList.remove('active');
+  });
+
+  // Click overlay to close
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+
+  // Escape key to close
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      modal.classList.remove('active');
+    }
+  });
+}
+
 function init() {
+  setupHelpModal();
   setupPanelToggles();
   setupRefreshButtons();
   connectSSE();
